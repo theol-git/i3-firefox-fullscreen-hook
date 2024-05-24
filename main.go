@@ -33,6 +33,7 @@ func isFirefoxEnterFullscreenEvent(event *i3.WindowEvent) bool {
 	}
 
 	workspaceNode := getFocusedWorkspaceNode()
+	// if size is already equals -> exiting fullscreen
 	if workspaceNode.Rect.X == event.Container.Rect.X && workspaceNode.Rect.Y == event.Container.Rect.Y {
 		return false
 	}
